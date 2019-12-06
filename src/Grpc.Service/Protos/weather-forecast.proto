@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "Grpc.Service";
+
+package WeatherForecast;
+
+service Summary {
+  rpc SaySummary (TemperatureRequest) returns (SummaryReply);
+}
+
+message TemperatureRequest {
+  int32 celsius = 1;
+}
+
+message SummaryReply {
+  string summary = 1;
+}

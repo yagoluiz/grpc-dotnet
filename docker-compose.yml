@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+  grpc-service:
+    image: grpc-service
+    build:
+      context: .
+    ports:
+      - "5000:80"
+    networks:
+      - grpc-network
+
+  grpc-client:
+    image: grpc-client
+    build:
+      context: .
+    environment:
+      - GrpcServiceHost=http://grpc-service
+    ports:
+      - "5003:80"
+    networks:
+      - grpc-network
+
+networks:
+  grpc-network:
+    driver: bridge
