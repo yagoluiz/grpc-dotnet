@@ -1,6 +1,5 @@
 ﻿using Grpc.Client.Grpc;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,13 +12,9 @@ namespace Grpc.Client.Controllers
     public class WeatherForecastController : ControllerBase
     {
         private readonly IWeatherForecastGrpc _weatherForecastGrpc;
-        private readonly ILogger<WeatherForecastController> _logger;
 
-        public WeatherForecastController(
-            ILogger<WeatherForecastController> logger,
-            IWeatherForecastGrpc weatherForecastGrpc)
+        public WeatherForecastController(IWeatherForecastGrpc weatherForecastGrpc)
         {
-            _logger = logger;
             _weatherForecastGrpc = weatherForecastGrpc;
         }
 

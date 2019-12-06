@@ -21,3 +21,7 @@ Run projects in [*"multiple startup"*](https://docs.microsoft.com/en-us/visualst
 * Docker compose:
 
 `docker-compose up -d .`
+
+### Endpoint
+
+*http://localhost:port/weather-forecast/temperature/celsius/35* **(GET)**
