@@ -1,10 +1,11 @@
-version: '3.4'
+version: '3.7'
 
 services:
   grpc-service:
     image: grpc-service
     build:
       context: .
+      dockerfile: src/Grpc.Service/Dockerfile
     ports:
       - "5000:80"
     networks:
@@ -14,6 +15,7 @@ services:
     image: grpc-client
     build:
       context: .
+      dockerfile: src/Grpc.Client/Dockerfile
     environment:
       - GrpcServiceHost=http://grpc-service
     ports:

@@ -4,19 +4,7 @@ Comunication API's using [gRPC](https://grpc.io/).
 
 ## Instructions for run project
 
-### Visual Studio
-
-Run projects in [*"multiple startup"*](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-set-multiple-startup-projects?view=vs-2019). 
-
 ### Docker
-
-* Grpc.Service:
-
-`docker build -t grpc-service .`
-
-* Grpc.Client:
-
-`docker build -t grpc-client .`
 
 * Docker compose:
 
@@ -24,4 +12,4 @@ Run projects in [*"multiple startup"*](https://docs.microsoft.com/en-us/visualst
 
 ### Endpoint
 
-*http://localhost:port/weather-forecast/temperature/celsius/35* **(GET)**
+*http://localhost:5003/weather-forecast/temperature/celsius/35* **(GET)**
