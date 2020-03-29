@@ -8,7 +8,7 @@ Comunication API's using [gRPC](https://grpc.io/).
 
 * Docker compose:
 
-`docker-compose up -d .`
+`docker-compose up -d`
 
 ### Endpoint
 
